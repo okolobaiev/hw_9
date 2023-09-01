@@ -6,11 +6,11 @@ def input_error(func):
         try:
             return func(*param)
         except KeyError:
-            return "Enter user name"
+            return "User not found"
         except ValueError:
-            return "Give me name and phone please"
+            return "Give me name (and phone) please"
         except IndexError:
-            return "Give me name and phone please"
+            return "Give me name (and phone) please"
 
     return inner
 
